@@ -1,0 +1,108 @@
+@import 'tailwindcss';
+
+:root {
+  --wf-bg: #f3f4f6;
+  --wf-panel: #ffffff;
+  --wf-border: #d1d5db;
+  --wf-border-strong: #9ca3af;
+  --wf-ink: #111827;
+  --wf-muted: #6b7280;
+  --wf-accent: #374151;
+  --wf-warn: #b45309;
+  --wf-ok: #047857;
+  --wf-danger: #b91c1c;
+  --wf-dot: #dc2626;
+  --phone-w: 375px;
+  --phone-h: 812px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family:
+    'PingFang SC',
+    'Hiragino Sans GB',
+    'Microsoft YaHei',
+    system-ui,
+    sans-serif;
+  color: var(--wf-ink);
+  background: var(--wf-bg);
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.wf-label {
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--wf-muted);
+}
+
+.wf-dashed {
+  border: 1px dashed var(--wf-border-strong);
+}
+
+.wf-solid {
+  border: 1px solid var(--wf-border);
+}
+
+.flow-node {
+  border: 1px solid var(--wf-border-strong);
+  background: #fff;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 13px;
+}
+
+.flow-arrow {
+  color: var(--wf-muted);
+  font-size: 12px;
+  text-align: center;
+  padding: 4px 0;
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+.red-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--wf-dot);
+  animation: pulse-dot 1.4s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #e5e7eb 25%, #f3f4f6 50%, #e5e7eb 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s linear infinite;
+  border-radius: 4px;
+}
