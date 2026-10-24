@@ -35,3 +35,11 @@ npm run dev
 ## 技术栈
 
 Vite + React + TypeScript + Tailwind CSS + React Router
+
+## GitHub Pages
+
+Production build is committed under `docs/` for GitHub Pages.
+
+1. Repo **Settings → Pages**
+2. Deploy from a branch → Branch **`main`** → Folder **`/docs`** → Save
+3. Site: https://singinthewind.github.io/LOVEDOGECAT/
