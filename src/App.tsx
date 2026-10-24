@@ -19,7 +19,7 @@ import Risk from './pages/admin/Risk'
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '') || '/'}>
       <Routes>
         <Route path="/" element={<Hub />} />
         <Route path="/flows/binding" element={<BindingFlowPage />} />
